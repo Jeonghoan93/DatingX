@@ -1,18 +1,16 @@
 import IconTextDesc from "@/components/IconTitleDesc";
-import CategoryFilter from "@/components/shared/CategoryFilter";
-import Collection from "@/components/shared/Collection";
-import Search from "@/components/shared/Search";
 import { Button } from "@/components/ui/button";
 import { getAllEvents } from "@/lib/actions/event.actions";
 import { SearchParamProps } from "@/types";
 import Image from "next/image";
 import Link from "next/link";
-import { FaRegGrinHearts, FaSpotify } from "react-icons/fa";
-import { IoIosNotificationsOutline } from "react-icons/io";
-import { IoTicketOutline } from "react-icons/io5";
-import { MdSecurityUpdateGood, MdTravelExplore } from "react-icons/md";
+import { MdOutlinePrivacyTip, MdSecurityUpdateGood } from "react-icons/md";
 import { RiSecurePaymentLine } from "react-icons/ri";
-import { TbWorld } from "react-icons/tb";
+import {
+  SiJirasoftware,
+  SiKingstontechnology,
+  SiSurrealdb,
+} from "react-icons/si";
 
 export default async function Home({ searchParams }: SearchParamProps) {
   const page = Number(searchParams?.page) || 1;
@@ -68,94 +66,56 @@ export default async function Home({ searchParams }: SearchParamProps) {
         <div className="wrapper grid grid-cols-1 gap-10 md:grid-cols-2">
           <div className="flex flex-col gap-10">
             <IconTextDesc
-              icon={<TbWorld size={26} />}
-              title={"The global guide of local scenes"}
+              icon={<MdOutlinePrivacyTip size={26} />}
+              title={"Privacy and Security"}
               desc={
-                "Discover the best events, clubs, festivals and DJs near you in over 155 countries."
+                "Your privacy is our priority. Enjoy exclusive dating experiences with full confidentiality and robust data security."
               }
             />
 
             <IconTextDesc
-              icon={<IoTicketOutline size={26} />}
-              title={"Secure the tickets"}
+              icon={<SiSurrealdb size={26} />}
+              title={"AI-Powered Precision"}
               desc={
-                "Pay with Apple Pay, Google Pay, PayPal, Amex and credit cards in your local currency."
+                "We use APIs from industry's the most advanced AI technology avaialble."
               }
             />
 
             <IconTextDesc
-              icon={<MdTravelExplore size={26} />}
-              title={"Deep discovery"}
+              icon={<SiJirasoftware size={26} />}
+              title={"Product Driven"}
               desc={
-                "Filter events by type, size, genre, date, popularity, DatingX Picks and For You."
-              }
-            />
-
-            <IconTextDesc
-              icon={<FaSpotify size={26} />}
-              title={"Import your music taste"}
-              desc={
-                "Sync with Spotify to power up your personalised event discovery."
+                "We are professional software engineers not marketers like others. We guarantee the best value for your money."
               }
             />
           </div>
 
           <div className="flex flex-col gap-10">
             <IconTextDesc
-              icon={<FaRegGrinHearts size={26} />}
-              title={"Artist Notifications"}
-              desc={"Never miss your favourite DJ playing in your local city."}
+              icon={<RiSecurePaymentLine size={26} />}
+              title={"Secure Payment"}
+              desc={
+                "Our proven track record and testimonials speak volumes about the effectiveness of our service."
+              }
             />
 
             <IconTextDesc
               icon={<MdSecurityUpdateGood size={26} />}
-              title={"Get in stress-free"}
+              title={"User-Friendly Experience"}
               desc={
-                "Display your tickets in-app and never miss last entry with Maps and Uber integrations."
+                "Our app is designed for simplicity and ease. Upload photos, wait few hours, and recieve your profile photos."
               }
             />
 
             <IconTextDesc
-              icon={<RiSecurePaymentLine size={26} />}
-              title={"Buy with confidence"}
+              icon={<SiKingstontechnology size={26} />}
+              title={"Authenticity at Heart"}
               desc={
-                "Benefit from industry-leading anti-tout technology and our fully-featured resale system."
-              }
-            />
-
-            <IconTextDesc
-              icon={<IoIosNotificationsOutline size={26} />}
-              title={"Ticket notifications"}
-              desc={
-                "Get notified as soon as a ticket to a sold out event becomes available (coming soon)."
+                "Our AI is trained to analyze your photos and profile to create the best possible dating profile."
               }
             />
           </div>
         </div>
-      </section>
-
-      <section
-        id="events"
-        className="wrapper my-8 flex flex-col gap-8 md:gap-12"
-      >
-        <h2 className="h2-bold">
-          Trust by <br /> Thousands of Events
-        </h2>
-
-        <div className="flex w-full flex-col gap-5 md:flex-row">
-          <Search />
-          <CategoryFilter />
-        </div>
-
-        <Collection
-          data={events?.data}
-          emptyTitle="No Events Found"
-          emptyStateSubtext="Come back later"
-          collectionType="All_Events"
-          limit={6}
-          page={page}
-          totalPages={events?.totalPages}
-        />
       </section>
     </>
   );
