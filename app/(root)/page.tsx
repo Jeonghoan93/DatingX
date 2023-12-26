@@ -63,7 +63,7 @@ export default async function Home({ searchParams }: SearchParamProps) {
       </section>
 
       <section className="bg-primary-50 bg-dotted-pattern bg-contain py-10 md:py-20">
-        <div className="w-full flex flex-col gap-3 sm:gap-4 items-center justify-center">
+        <div className="px-4 w-full flex flex-col gap-3 sm:gap-4 items-center justify-center">
           <span className="text-gray-500 p-semibold-14 sm:p-semibold-16">
             Works for all dating apps
           </span>
