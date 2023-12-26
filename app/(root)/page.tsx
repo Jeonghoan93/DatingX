@@ -62,7 +62,21 @@ export default async function Home({ searchParams }: SearchParamProps) {
         </div>
       </section>
 
-      <section className="bg-primary-50 bg-dotted-pattern bg-contain py-5 md:py-10">
+      <section className="bg-primary-50 bg-dotted-pattern bg-contain py-10 md:py-20">
+        <div className="w-full flex flex-col gap-3 sm:gap-4 items-center justify-center">
+          <span className="text-gray-500 p-semibold-14 sm:p-semibold-16">
+            Works for all dating apps
+          </span>
+          <Image
+            src="/assets/images/dating-apps.svg"
+            alt="hero"
+            width={500}
+            height={500}
+          />
+        </div>
+      </section>
+
+      <section className="bg-primary-50 bg-dotted-pattern bg-contain py-10 md:py-20">
         <div className="wrapper grid grid-cols-1 gap-10 md:grid-cols-2">
           <div className="flex flex-col gap-10">
             <IconTextDesc
@@ -77,7 +91,7 @@ export default async function Home({ searchParams }: SearchParamProps) {
               icon={<SiSurrealdb size={26} />}
               title={"AI-Powered Precision"}
               desc={
-                "We use APIs from industry's the most advanced AI technology avaialble."
+                "We use industry's the most advanced AI infrastructures avaialble, Today."
               }
             />
 
@@ -95,7 +109,7 @@ export default async function Home({ searchParams }: SearchParamProps) {
               icon={<RiSecurePaymentLine size={26} />}
               title={"Secure Payment"}
               desc={
-                "Our proven track record and testimonials speak volumes about the effectiveness of our service."
+                "Trust is everything. We have built our advanced security protocols and encrypted payment system."
               }
             />
 
@@ -111,7 +125,7 @@ export default async function Home({ searchParams }: SearchParamProps) {
               icon={<SiKingstontechnology size={26} />}
               title={"Authenticity at Heart"}
               desc={
-                "Our AI is trained to analyze your photos and profile to create the best possible dating profile."
+                "Our AI is trained specifically for dating apps to create the best possible dating profile."
               }
             />
           </div>

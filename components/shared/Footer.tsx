@@ -27,15 +27,12 @@ const FooterSectionTitle = ({ title }: { title: string }) => {
 const Footer = () => {
   const Info: Array<NavigationItemProps> = [
     { label: "About", path: "/about" },
-    { label: "Tickets", path: "/tickets" },
-    { label: "Resale", path: "/resale" },
-    { label: "Advertise", path: "/advertise" },
+    { label: "Product", path: "/tickets" },
   ];
 
-  const Hosting: Array<NavigationItemProps> = [
-    { label: "Sell tickets online", path: "/events/create" },
-    { label: "Get paid online", path: "/events/create" },
-    { label: "QR codes for check-in", path: "/events/create" },
+  const Dating: Array<NavigationItemProps> = [
+    { label: "Get more match", path: "/events/create" },
+    { label: "General tips", path: "/events/create" },
   ];
 
   const DatingX = [
@@ -104,8 +101,8 @@ const Footer = () => {
             </div>
 
             <div className="w-full md:w-1/3 p-3">
-              <FooterSectionTitle title="Hosting" />
-              {Hosting.map(({ label, path }, index) => (
+              <FooterSectionTitle title="Dating" />
+              {Dating.map(({ label, path }, index) => (
                 <NavigationItem key={index} label={label} path={path} />
               ))}
             </div>

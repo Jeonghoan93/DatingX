@@ -4,15 +4,11 @@ import { BsPersonFill } from "react-icons/bs";
 export const headerLinks = (userId: string) => {
   return [
     {
-      label: "Find party",
+      label: "Get your photos",
       route: "/events",
     },
     {
-      label: "List party",
-      route: "/events/create",
-    },
-    {
-      label: "My Profile",
+      label: "My account",
       route: `/profile/${userId}}`,
     },
   ];
